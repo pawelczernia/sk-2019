@@ -14,26 +14,27 @@ Zaproponuj rozwiązanie spełniające poniższe wymagania:
 ![Diagram](diag.png)
 
 ### 1)Ustalenie maski podsieci dla
-    '''LAN1 172.22.128.0/23 dla 500 adresów (dokładnie 510)
-    Lan2 172.22.160.0/19 dla 5000 adresów (dokładnie 8190)'''
+
+    LAN1 172.22.128.0/23 dla 500 adresów (dokładnie 510)
+    Lan2 172.22.160.0/19 dla 5000 adresów (dokładnie 8190)
 
 ### 2) Dodajemy adresy 
-PC0
+          PC0
     ip addr add 172.22.128.1/23 dev enp0s8 
     ip addr add 172.22.160.1/19 dev enp0s9
 
-PC1
+          PC1
     ip addr add 172.22.128.2/23 dev enp0s3
 
-PC2
+          PC2
     ip addr add 172.22.128.2/19 dev enp0s3
 
 ### 3) Ustalamy routing 
-PC1
+        PC1
     ip route delete default
     up ip route add default via 172.22.128.1 dev enp0s3
 
-PC2
+        PC2
     ip route delete default
     up ip route add default via 172.22.160.1 dev enp0s3
 
@@ -43,7 +44,7 @@ PC2
 ### 5) Dodanie reguły masquerade w PC0
     iptables -t nat -A POSTROUTING -s 172.22.128.0/23 -o enp0s3 -j MASQUERADE
     iptables -t nat -A POSTROUTING -s 172.22.160.0/19 -o enp0s3 -j MASQUERADE
- Aktywacja
+        Aktywacja
     ip link set enp0s3 up
     ip link set enp0s8 up
     ip link set enp0s9 up
