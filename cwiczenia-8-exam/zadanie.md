@@ -1,7 +1,7 @@
 Zadanie 1
 ---------
 
-![zadanie 1](diag.png)
+![zadanie 1](zadanie-1.svg)
 
 1. Zaprojektuj oraz przygotuj prototyp rozwiązania z wykorzystaniem oprogramowania ``VirtualBox`` lub podobnego. 
 Zaproponuj rozwiązanie spełniające poniższe wymagania:
@@ -10,3 +10,5 @@ Zaproponuj rozwiązanie spełniające poniższe wymagania:
    * Dokonaj takiego podziału sieci o adresie ``172.22.128.0/17`` aby w ``LAN1`` można było zaadresować ``500`` adresów natomiast w LAN2 ``5000`` adresów    
    * Przygotuj dokumentację powyższej architektury w formie graficznej w programie ``DIA``
  
+
+![Diagram](diag.png)
