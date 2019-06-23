@@ -13,9 +13,9 @@ Zaproponuj rozwiązanie spełniające poniższe wymagania:
 
 ![Diagram](diag.png)
 
-### 1)Ustalenie maski podsieci dla'''
-    LAN1 172.22.128.0/23 dla 500 adresów (dokładnie 510)
-    Lan2 172.22.160.0/19 dla 5000 adresów (dokładnie 8190)
+### 1)Ustalenie maski podsieci dla
+    '''LAN1 172.22.128.0/23 dla 500 adresów (dokładnie 510)
+    Lan2 172.22.160.0/19 dla 5000 adresów (dokładnie 8190)'''
 
 ### 2) Dodajemy adresy 
 PC0
