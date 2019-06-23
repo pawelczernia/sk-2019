@@ -22,7 +22,7 @@ Zaproponuj rozwiązanie spełniające poniższe wymagania:
           PC0
     ip addr add 172.22.128.1/23 dev enp0s8 
     ip addr add 172.22.160.1/19 dev enp0s9
-       Aktywacja
+       Aktywacja ( oczywiście po dodaniu PC1 i PC2)
     ip link set enp0s3 up
     ip link set enp0s8 up
     ip link set enp0s9 up
@@ -45,7 +45,7 @@ Zaproponuj rozwiązanie spełniające poniższe wymagania:
 ### 4) Przekierowywanie pakietu w PC0
     echo 1 > /proc/sys/net/ipv4/ip_forward 
 
-### 5) Dodanie reguły masquerade w PC0
+### 5) Dodanie reguły masquerade w PC0 ( udostępnienie internetu dla podsieci)
     iptables -t nat -A POSTROUTING -s 172.22.128.0/23 -o enp0s3 -j MASQUERADE
     iptables -t nat -A POSTROUTING -s 172.22.160.0/19 -o enp0s3 -j MASQUERADE
      
