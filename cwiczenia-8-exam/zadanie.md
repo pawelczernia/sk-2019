@@ -20,32 +20,32 @@ Zaproponuj rozwiązanie spełniające poniższe wymagania:
  Dodanie adresów:
   ---
           PC0
-    ip addr add 172.22.128.1/23 dev enp0s8 
-    ip addr add 172.22.160.1/19 dev enp0s9
-       Aktywacja
-    ip link set enp0s3 up
-    ip link set enp0s8 up
-    ip link set enp0s9 up
+   * ip addr add 172.22.128.1/23 dev enp0s8 
+   * ip addr add 172.22.160.1/19 dev enp0s9
+    
+   * ip link set enp0s3 up
+   * ip link set enp0s8 up
+   * ip link set enp0s9 up
 
           PC1
-    ip addr add 172.22.128.2/23 dev enp0s3
+   * ip addr add 172.22.128.2/23 dev enp0s3
 
           PC2
-    ip addr add 172.22.128.2/19 dev enp0s3
+   * ip addr add 172.22.128.2/19 dev enp0s3
     
  Ustalenie routingu
  ---
     
     PC1
-     ip route add default via 172.22.128.1 dev enp0s3
+   *  ip route add default via 172.22.128.1 dev enp0s3
     PC2
-     ip route add default via 172.22.160. dev enp0s3
+   *  ip route add default via 172.22.160. dev enp0s3
     
  Przekierowywanie pakietu w PC0
  ---
-    echo 1 > /proc/sys/net/ipv4/ip_forward
+   * echo 1 > /proc/sys/net/ipv4/ip_forward
  Udostępnienie internetu dla LAN1 i LAN2
  ---
-    iptables -t nat -A POSTROUTING -s 172.22.128.0/23 -o enp0s3 -j MASQUERADE
-    iptables -t nat -A POSTROUTING -s 172.22.160.0/19 -o enp0s3 -j MASQUERADE
+   * iptables -t nat -A POSTROUTING -s 172.22.128.0/23 -o enp0s3 -j MASQUERADE
+   * iptables -t nat -A POSTROUTING -s 172.22.160.0/19 -o enp0s3 -j MASQUERADE
     
