@@ -16,7 +16,7 @@ Zaproponuj rozwiązanie spełniające poniższe wymagania:
   * LAN2 172.22.128.0/19
   * (23 dla 500 adresów, 19 dla 5000)
   
-  Ustalenie adresów:
+ Dodanie adresów:
   ---
           PC0
     ip addr add 172.22.128.1/23 dev enp0s8 
@@ -31,3 +31,15 @@ Zaproponuj rozwiązanie spełniające poniższe wymagania:
 
           PC2
     ip addr add 172.22.128.2/19 dev enp0s3
+    
+ Ustalenie routingu
+ ---
+    
+    PC1
+    up ip route add default via 172.22.128.1 dev enp0s3
+    PC2
+    up ip route add default via 172.22.160. dev enp0s3
+    
+ Przekierowywanie pakietu w PC0
+ ---
+    echo 1 > /proc/sys/net/ipv4/ip_forward
