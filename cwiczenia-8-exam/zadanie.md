@@ -19,7 +19,7 @@ Zaproponuj rozwiązanie spełniające poniższe wymagania:
   
  Dodanie adresów:
   ---
-     PC0
+   PC0
    * ip addr add 172.22.128.1/23 dev enp0s8 
    * ip addr add 172.22.160.1/19 dev enp0s9
     
