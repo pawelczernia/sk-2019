@@ -22,7 +22,7 @@ Zaproponuj rozwiązanie spełniające poniższe wymagania:
           PC0
     ip addr add 172.22.128.1/23 dev enp0s8 
     ip addr add 172.22.160.1/19 dev enp0s9
-       Aktywacja ( oczywiście po dodaniu PC1 i PC2)
+       Aktywacja
     ip link set enp0s3 up
     ip link set enp0s8 up
     ip link set enp0s9 up
