@@ -14,7 +14,7 @@ Zaproponuj rozwiązanie spełniające poniższe wymagania:
 ---
   * LAN1 172.22.160.0/23 
   * LAN2 172.22.128.0/19
-  (23 dla 500 adresów, 19 dla 5000)
+  * (23 dla 500 adresów, 19 dla 5000)
   
   Ustalenie adresów:
   ---
