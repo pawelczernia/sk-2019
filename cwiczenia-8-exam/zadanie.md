@@ -36,9 +36,9 @@ Zaproponuj rozwiązanie spełniające poniższe wymagania:
  ---
     
     PC1
-    up ip route add default via 172.22.128.1 dev enp0s3
+     ip route add default via 172.22.128.1 dev enp0s3
     PC2
-    up ip route add default via 172.22.160. dev enp0s3
+     ip route add default via 172.22.160. dev enp0s3
     
  Przekierowywanie pakietu w PC0
  ---
