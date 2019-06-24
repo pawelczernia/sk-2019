@@ -45,6 +45,7 @@ Zaproponuj rozwiązanie spełniające poniższe wymagania:
  Przekierowywanie pakietu w PC0
  ---
    * echo 1 > /proc/sys/net/ipv4/ip_forward
+ 
  Udostępnienie internetu dla LAN1 i LAN2
  ---
    * iptables -t nat -A POSTROUTING -s 172.22.128.0/23 -o enp0s3 -j MASQUERADE
